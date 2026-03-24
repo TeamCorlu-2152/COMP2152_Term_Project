@@ -45,7 +45,7 @@ time.sleep(0.15)  # wait 150ms between requests
 3. Create your own branch: `git checkout -b your_vuln_name`
 4. Write a Python script that finds and demonstrates a vulnerability
 5. Submit your finding at http://submit.0x10.cloud
-6. Merge your branch into main when done
+6. Merge your branch into master when done
 
 ## Rules
 
