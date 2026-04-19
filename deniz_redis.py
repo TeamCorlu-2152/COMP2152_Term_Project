@@ -17,7 +17,7 @@ def check_redis_vuln():
     print(f"[*] Port:   {port}")
     print("[*] Scanning for exposed database...")
     
-    time.sleep(0.15) # Rate limit kuralına uyuyoruz
+    time.sleep(0.15) 
     
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
