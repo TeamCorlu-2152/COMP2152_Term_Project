@@ -8,7 +8,7 @@ TeamCorlu-2152
 | Member | Vulnerability Found | Branch Name |
 |--------|-------------------|-------------|
 | Yigit Alkoc | Cleartext Telnet Service on Port 2323 | yigit_telnet |
-| Deniz Can | Information Leakage in HTTP Headers | deniz_http |
+| Deniz Can | Exposed Redis Database on Port 6379 | deniz_ftp_hard |
 | Yigit & Deniz (Bonus) | Anonymous FTP Login Allowed (Medium Risk) | bonus_ftp |
 
 ## Videos
