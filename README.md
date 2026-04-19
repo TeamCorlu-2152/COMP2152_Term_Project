@@ -15,7 +15,7 @@ TeamCorlu-2152
 
 Each team member records a short video (max 3 minutes) explaining their vulnerability. Add your YouTube links below:
 
-- Yigit Alkoc: [youtube link]
+- Yigit Alkoc: (https://www.youtube.com/watch?v=BF-N-GAjWTI)
 - Deniz Can: [youtube link]
 
 ## Target
